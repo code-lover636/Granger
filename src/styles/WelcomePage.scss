@@ -1,0 +1,98 @@
+@import "./global.scss";
+
+.welcome-page {
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(2.5em);
+        .heading {
+            font-weight: 900;
+            font-size: 6rem;
+            letter-spacing: 0.15em;
+            background: linear-gradient(90deg, #0085FF 0%, #6D08EB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.75);;
+            background-clip: text;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          }
+        
+          .sub-heading {
+            font-size: 1.4rem;
+            font-weight: 400;
+            text-align: center;
+            color: #ffffff;
+            padding-bottom:5em;
+          }
+        
+          .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+            
+            .button1, .button2{
+                font-size: 1rem;
+                font-weight: 700;
+                color: rgb(0, 0, 0);
+                background: linear-gradient(180deg, #0085FF 0%, #6D0AFF 100%);
+                border: 2px solid $primary-color;
+                padding: .35em 2em;
+                text-decoration: none;
+                cursor: pointer;
+                &:hover{
+                    background: rgba(0, 0, 0, 0.75);
+                    border: 2px solid $primary-color;
+                    color: $primary-color
+                }
+            }
+            .button2{
+                background: rgba(0, 0, 0, 0.75);
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                &:hover{
+                    border: 2px solid $primary-color;
+                    color: rgb(0, 0, 0);
+                    background: linear-gradient(180deg, #0085FF 0%, #6D0AFF 100%);
+                }
+            }
+          }
+    }
+  
+    &__copy-right {
+      position: absolute;
+      bottom: 1rem;
+      color: #ffffff;
+      text-align: center;
+      padding: 0em 1em;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .welcome-page{
+        .wrapper{
+            .heading{
+                font-size: 3.5rem;
+            }
+            .sub-heading{
+                font-size: 1rem;
+            }
+            .buttons{
+                .button1, .button2{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+  
